@@ -13,6 +13,187 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#IsBlockBased -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#IsBlockBased">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Block"/>
+        <rdfs:comment xml:lang="en">Determines if the technology behind the cryptocurrency is based on blocks.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#basedOnTechnology -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#basedOnTechnology">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+        <rdfs:comment xml:lang="en">Base technology of the cryptocurrency for example blockchain (e.g bitcoin) or tangle (e.g) ethereum.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#hasArchitecture -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#hasArchitecture">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Architecture"/>
+        <rdfs:comment xml:lang="en">Specifies details for the architecture e.g. public or private.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#hasScriptingLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#hasScriptingLanguage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ScriptingLanguage"/>
+        <rdfs:comment xml:lang="en">Indicates which scripting language is used above the main one.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#hasValidationMethod -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#hasValidationMethod">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Validation"/>
+        <rdfs:comment xml:lang="en">Validation method of the blockchain such as Proof of Work ... stake..</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#minableWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#minableWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MiningTechnology"/>
+        <rdfs:comment xml:lang="en">Indicates the mining technology used (ASIC..).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#miningBasedOnProblem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#miningBasedOnProblem">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MiningTechnology"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MathProblem"/>
+        <rdfs:comment xml:lang="en">Tells which mathematical problem is used.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#IsPublic -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#IsPublic">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Architecture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Value">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#blockDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#blockDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Block"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#canExecuteSmartContracts -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#canExecuteSmartContracts">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ScriptingLanguage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#creationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#creationDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#isOpen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#isOpen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Access"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#isTuringComplete -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#isTuringComplete">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ScriptingLanguage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#mathProblemName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#mathProblemName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MathProblem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -21,23 +202,205 @@
     
 
 
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ASIC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ASIC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MiningTechnology"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Access -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Access"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Access">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Architecture"/>
+        <rdfs:comment xml:lang="en">Public or private access.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Architecture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Architecture">
+        <rdfs:comment xml:lang="en">Distributed or centralized architecture</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Block -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Block">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Blockchain"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Block"/>
     
 
 
     <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Blockchain -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Blockchain"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Blockchain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#DelayedProofOfWork -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#DelayedProofOfWork">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ProofOfWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#GPUMining -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#GPUMining">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MiningTechnology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Hashgraph -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Hashgraph">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Language -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Language">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MathProblem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MathProblem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Mining"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Mining -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Mining"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MiningTechnology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MiningTechnology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Mining"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ProofOfAuthority -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ProofOfAuthority">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Validation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ProofOfSpace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ProofOfSpace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Validation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ProofOfStake -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ProofOfStake">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Validation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ProofOfWork -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ProofOfWork">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Validation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Rig -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Rig">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#GPUMining"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ScriptingLanguage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ScriptingLanguage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#SmartContract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#SmartContract">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ScriptingLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Tangle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Tangle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#TuringComplete -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#TuringComplete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ScriptingLanguage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Validation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Validation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Bitcoin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Bitcoin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
