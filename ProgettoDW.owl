@@ -131,7 +131,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Value">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
@@ -400,6 +400,21 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Bitcoin">
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
+        <basedOnTechnology rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinBlockchain"/>
+        <IsPublic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</IsPublic>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bitcoin</Name>
+        <Value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">34025.28</Value>
+        <canExecuteSmartContracts rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</canExecuteSmartContracts>
+        <isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOpen>
+        <isTuringComplete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isTuringComplete>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinBlockchain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinBlockchain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Blockchain"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
