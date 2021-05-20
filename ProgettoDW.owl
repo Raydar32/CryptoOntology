@@ -21,6 +21,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Block -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Block">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Blockchain"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Blockchain -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Blockchain"/>
