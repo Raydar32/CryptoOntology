@@ -31,6 +31,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#architectureTopology -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#architectureTopology">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#basedOnTechnology -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#basedOnTechnology">
@@ -98,6 +106,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#writtenInLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#writtenInLanguage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Language"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -114,6 +132,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#IsPublic">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Architecture"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Tells if the tech. can be used by everyone or not.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -123,6 +142,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Name">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name of the cryptocurrency</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -132,6 +152,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Value">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Value of the cryptocurrency (at the time of creation)</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -141,6 +162,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#blockDescription">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Block"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Description of a block item.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -151,6 +173,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ScriptingLanguage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Tells if the crypto. is enabled to run smart contracts</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -160,6 +183,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#creationDate">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Birth date of cryptocurrency</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -167,8 +191,10 @@
     <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#isOpen -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#isOpen">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Access"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Tells if the technology is open source or not.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -178,6 +204,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#isTuringComplete">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ScriptingLanguage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Turing completness of the technology</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -187,6 +214,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#mathProblemName">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MathProblem"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name of the mathematical problem.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -206,6 +234,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ASIC">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MiningTechnology"/>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Application-specific_integrated_circuit"/>
     </owl:Class>
     
 
@@ -215,6 +244,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Access">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Architecture"/>
         <rdfs:comment xml:lang="en">Public or private access.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Access_control"/>
     </owl:Class>
     
 
@@ -223,13 +253,16 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Architecture">
         <rdfs:comment xml:lang="en">Distributed or centralized architecture</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Category:Distributed_computing_architecture"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Block -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Block"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Block">
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Blockchain"/>
+    </owl:Class>
     
 
 
@@ -237,13 +270,16 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Blockchain">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Blockchain"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency">
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Cryptocurrency"/>
+    </owl:Class>
     
 
 
@@ -251,6 +287,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#DelayedProofOfWork">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ProofOfWork"/>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Proof_of_work"/>
+        <rdfs:seeAlso rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/work"/>
     </owl:Class>
     
 
@@ -259,6 +297,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#GPUMining">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MiningTechnology"/>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Category:Distributed_computing_architecture"/>
     </owl:Class>
     
 
@@ -267,6 +306,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Hashgraph">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Hashgraph"/>
     </owl:Class>
     
 
@@ -275,6 +315,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Language">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/ontology/programmingLanguage"/>
     </owl:Class>
     
 
@@ -283,20 +324,24 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MathProblem">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Mining"/>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Cryptographic_hash_function"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Mining -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Mining"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Mining">
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Mining_pool"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MiningTechnology -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MiningTechnology">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Mining"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Mining_pool"/>
     </owl:Class>
     
 
@@ -305,6 +350,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ProofOfAuthority">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Validation"/>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Proof_of_concept"/>
     </owl:Class>
     
 
@@ -313,6 +359,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ProofOfSpace">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Validation"/>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Proof_of_concept"/>
     </owl:Class>
     
 
@@ -321,6 +368,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ProofOfStake">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Validation"/>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Proof_of_stake"/>
     </owl:Class>
     
 
@@ -329,14 +377,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ProofOfWork">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Validation"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Rig -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Rig">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#GPUMining"/>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Proof_of_work"/>
     </owl:Class>
     
 
@@ -345,6 +386,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ScriptingLanguage">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Scripting_language"/>
     </owl:Class>
     
 
@@ -353,6 +395,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#SmartContract">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ScriptingLanguage"/>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Smart_contract"/>
     </owl:Class>
     
 
@@ -361,6 +404,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Tangle">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/IOTA_(technology)"/>
     </owl:Class>
     
 
@@ -375,13 +419,17 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#TuringComplete">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ScriptingLanguage"/>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Turing_completeness"/>
     </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Validation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Validation"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Validation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Proof_of_concept"/>
+    </owl:Class>
     
 
 
@@ -396,17 +444,40 @@
     
 
 
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ASICMiner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ASICMiner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ASIC"/>
+        <rdfs:comment xml:lang="en">Describes a generic ASIC Miner</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Bitcoin -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Bitcoin">
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
+        <IsBlockBased rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#true"/>
+        <architectureTopology rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Distributed"/>
         <basedOnTechnology rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinBlockchain"/>
+        <hasArchitecture rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinCore"/>
+        <hasScriptingLanguage rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Script"/>
+        <hasValidationMethod rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinProofOfWork"/>
+        <minableWith rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#NVIDIAGpu"/>
+        <miningBasedOnProblem rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#HashGuessing"/>
+        <writtenInLanguage rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#C++"/>
         <IsPublic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</IsPublic>
         <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bitcoin</Name>
         <Value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">34025.28</Value>
+        <blockDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un blocco è una parte della blockchain che contiene e conferma molte transazioni in attesa. In media circa ogni 10 minuti un nuovo blocco, che include delle transazioni, viene aggiunto alla blockchain attraverso il processo di mining.</blockDescription>
         <canExecuteSmartContracts rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</canExecuteSmartContracts>
+        <creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-01-03T09:00:00</creationDate>
         <isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOpen>
         <isTuringComplete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isTuringComplete>
+        <rdfs:comment xml:lang="en">Bitcoin is a digital currency that was created in January 2009. It follows the ideas set out in a whitepaper by the mysterious and pseudonymous Satoshi Nakamoto.1
+
+﻿ The identity of the person or persons who created the technology is still a mystery. Bitcoin offers the promise of lower transaction fees than traditional online payment mechanisms and, unlike government-issued currencies, it is operated by a decentralized authority.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Bitcoin"/>
     </owl:NamedIndividual>
     
 
@@ -415,6 +486,117 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinBlockchain">
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Blockchain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinCore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinCore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Architecture"/>
+        <rdfs:comment xml:lang="en">Description 
+
+The term “bitcoin network” refers to the collection of nodes running the bitcoin P2P protocol. In addition to the bitcoin P2P protocol, there are other protocols such as Stratum, which are used for mining and lightweight or mobile wallets. These additional protocols are provided by gateway routing servers that access the bitcoin network using the bitcoin P2P protocol, and then extend that network to nodes running other protocols. For example, Stratum servers connect Stratum mining nodes via the Stratum protocol to the main bitcoin network and bridge the Stratum protocol to the bitcoin P2P protocol. We use the term “extended bitcoin network” to refer to the overall network that includes the bitcoin P2P protocol, pool-mining protocols, the Stratum protocol, and any other related protocols connecting the components of the bitcoin system.
+
+In this network there can be 6 kinds of nodes:
+
+Reference client
+Full block chain node
+solo miner
+SPV Wallet
+Mining Nodes
+SPV Stratum wallet.
+
+Network Discovery
+
+When a new node boots up, it must discover other bitcoin nodes on the network in order to participate. To start this process, a new node must discover at least one existing node on the network and connect to it. The geographic location of other nodes is irrelevant; the bitcoin network topology is not geographically defined. Therefore, any existing bitcoin nodes can be selected at random.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinProofOfWork -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinProofOfWork">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ProofOfWork"/>
+        <rdfs:comment xml:lang="en">Proof of work (PoW) describes a system that requires a not-insignificant but feasible amount of effort in order to deter frivolous or malicious uses of computing power, such as sending spam emails or launching denial of service attacks. The concept was subsequently adapted to securing digital money by Hal Finney in 2004 through the idea of &quot;reusable proof of work&quot; using the SHA-256 hashing algorithm. 
+
+Proof of work requires a computer to randomly engage in hashing functions until it arrives at an output with the correct minimum amount of leading zeroes. For example, the hash for block #429818, mined on September 14, 2016, for example, is 000000000000000004dd3426129639082239efd583b5273b1bd75e8d78ff2e8d. The block reward for that successful hash was 12.5 BTC.
+
+That block will always contain 2,012 transactions involving just over 1,000 bitcoin, as well as the header of the previous block. If somebody tried to change a transaction amount by even 0.000001 bitcoin, the resultant hash would be unrecognizable, and the network would reject the fraud attempt.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Proof_of_work"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Centralized -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Centralized">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Architecture"/>
+        <rdfs:comment xml:lang="en">A centralized architecture implies the availability of a single or a few entities that have control over the entire network</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Distributed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Distributed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Architecture"/>
+        <rdfs:comment xml:lang="en">In distributed architecture, components are presented on different platforms and several components can cooperate with one another over a communication network in order to achieve a specific objective or goal.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#HashGuessing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#HashGuessing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MathProblem"/>
+        <rdfs:comment>Mining nodes do this by constructing a block, hashing it and seeing if the hash is less than the target. If not, they retry constructing another block with small variations in contents.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#NVIDIAGpu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#NVIDIAGpu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#GPUMining"/>
+        <rdfs:comment>Generic GPU architecture</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/property/gpu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Script -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Script">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ScriptingLanguage"/>
+        <rdfs:comment>Bitcoin scripting language</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Scripting_language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#false -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#false">
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Boolean_data_type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#true -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#true">
+        <rdfs:comment>Boolean Value</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Boolean_data_type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#C++ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#C++">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Language"/>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/C%2B%2B"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
