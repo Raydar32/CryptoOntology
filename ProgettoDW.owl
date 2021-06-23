@@ -524,6 +524,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ADA">
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Token"/>
+        <startSellingDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-27T09:00:00</startSellingDate>
         <rdfs:comment xml:lang="en">&quot;Ada&quot; is Cardano&apos;s digital currency and is named after Ada Lovelace, a 19th-century countess and English mathematician who is recognized as the first computer programmer.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -552,21 +553,14 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
         <architectureTopology rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Distributed"/>
         <basedOnTechnology rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinBlockchain"/>
-        <hasArchitecture rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinCore"/>
-        <hasScriptingLanguage rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Script"/>
         <hasToken rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BTCT"/>
-        <hasValidationMethod rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinProofOfWork"/>
         <minableWith rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#NVIDIAGpu"/>
         <miningBasedOnProblem rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#HashGuessing"/>
         <writtenInLanguage rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#C++"/>
-        <IsPublic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</IsPublic>
         <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bitcoin</Name>
         <Value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">34025.28</Value>
         <blockDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un blocco è una parte della blockchain che contiene e conferma molte transazioni in attesa. In media circa ogni 10 minuti un nuovo blocco, che include delle transazioni, viene aggiunto alla blockchain attraverso il processo di mining.</blockDescription>
-        <canExecuteSmartContracts rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</canExecuteSmartContracts>
         <creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-01-03T09:00:00</creationDate>
-        <isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOpen>
-        <isTuringComplete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isTuringComplete>
         <managedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nobody</managedBy>
         <maxTokens rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21M total</maxTokens>
         <rdfs:comment xml:lang="en">Bitcoin is a digital currency that was created in January 2009. It follows the ideas set out in a whitepaper by the mysterious and pseudonymous Satoshi Nakamoto.1
@@ -581,6 +575,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinBlockchain">
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Blockchain"/>
+        <hasArchitecture rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinCore"/>
+        <hasScriptingLanguage rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Script"/>
+        <hasValidationMethod rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinProofOfWork"/>
     </owl:NamedIndividual>
     
 
@@ -589,6 +586,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#BitcoinCore">
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Architecture"/>
+        <IsPublic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IsPublic>
+        <isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isOpen>
         <rdfs:comment xml:lang="en">Description 
 
 The term “bitcoin network” refers to the collection of nodes running the bitcoin P2P protocol. In addition to the bitcoin P2P protocol, there are other protocols such as Stratum, which are used for mining and lightweight or mobile wallets. These additional protocols are provided by gateway routing servers that access the bitcoin network using the bitcoin P2P protocol, and then extend that network to nodes running other protocols. For example, Stratum servers connect Stratum mining nodes via the Stratum protocol to the main bitcoin network and bridge the Stratum protocol to the bitcoin P2P protocol. We use the term “extended bitcoin network” to refer to the overall network that includes the bitcoin P2P protocol, pool-mining protocols, the Stratum protocol, and any other related protocols connecting the components of the bitcoin system.
@@ -629,13 +628,9 @@ That block will always contain 2,012 transactions involving just over 1,000 bitc
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
         <architectureTopology rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Distributed"/>
         <basedOnTechnology rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#CardanoBlockchain"/>
-        <hasArchitecture rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Gougen"/>
-        <hasScriptingLanguage rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Plutus"/>
         <hasStakingMethod rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#CardanoColdStake"/>
         <hasToken rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ADA"/>
-        <hasValidationMethod rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Ouroboros"/>
         <writtenInLanguage rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Haskell"/>
-        <IsPublic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IsPublic>
         <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cardano</Name>
         <Value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.22</Value>
         <blockDescription>I nodi in Cardano si occupano di:
@@ -643,10 +638,7 @@ That block will always contain 2,012 transactions involving just over 1,000 bitc
 2) Validare e collegare i blocchi
 3) Produrre i blocchi
 4) Dare informazioni sulla blockchain.</blockDescription>
-        <canExecuteSmartContracts rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</canExecuteSmartContracts>
         <creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-27T09:00:00</creationDate>
-        <isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isOpen>
-        <isTuringComplete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isTuringComplete>
         <managedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CardanoGroup</managedBy>
         <maxTokens rdf:datatype="http://www.w3.org/2001/XMLSchema#string">45 MLD.</maxTokens>
         <rdfs:comment xml:lang="en">Cardano is a proof-of-stake blockchain platform: the first to be founded on peer-reviewed research and developed through evidence-based methods. It combines pioneering technologies to provide unparalleled security and sustainability to decentralized applications, systems, and societies.</rdfs:comment>
@@ -658,6 +650,9 @@ That block will always contain 2,012 transactions involving just over 1,000 bitc
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#CardanoBlockchain">
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Blockchain"/>
+        <hasArchitecture rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Gougen"/>
+        <hasScriptingLanguage rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Plutus"/>
+        <hasValidationMethod rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Ouroboros"/>
         <rdfs:comment xml:lang="en">Cardano architecture has gone trough 3 major development steps:
 Byron, Shelley and Goguen.
 Goguen, the last one has started in march 2021 and it permits the execution of smart contracts and it introduces an update of Plutus called Marlowe.
@@ -704,6 +699,7 @@ Another future update (not yet scheduled) is &quot;Basho&quot;.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ETH">
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Token"/>
+        <startSellingDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-06-30T09:00:00</startSellingDate>
     </owl:NamedIndividual>
     
 
@@ -720,6 +716,8 @@ Another future update (not yet scheduled) is &quot;Basho&quot;.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Ether">
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Architecture"/>
+        <IsPublic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IsPublic>
+        <isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isOpen>
         <rdfs:comment xml:lang="en">Ethereum is a Powerful and Trustful Blockchain environment used to deploy Smart Contracts.
 
 Vitalik Buterin is the co-founder and inventor of Ethereum, he describes it as a &quot;decentralised mining network and software development platform rolled into one that facilitates create new crypto currencies and programs that share a single Blockchain&quot;. 
@@ -757,20 +755,14 @@ Vitalik Buterin is the co-founder and inventor of Ethereum, he describes it as a
         <architectureTopology rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Distributed"/>
         <basedOnTechnology rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Tangle"/>
         <hasArchitecture rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Ether"/>
-        <hasScriptingLanguage rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Solidity"/>
         <hasStakingMethod rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ETHColdStaking"/>
         <hasToken rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ETH"/>
-        <hasValidationMethod rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#EthereumStaking"/>
         <writtenInLanguage rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#C++"/>
-        <IsPublic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IsPublic>
         <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethereum</Name>
         <Value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2041.56</Value>
         <blockDescription>The block in Ethereum is the collection of relevant pieces of information (known as the block header), H, together with information corresponding to the comprised transactions, T, and a set of other block headers U that are known to have a parent equal to the present block’s parent’s parent.</blockDescription>
-        <canExecuteSmartContracts rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</canExecuteSmartContracts>
         <creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-07-30T09:00:00</creationDate>
-        <isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isOpen>
-        <isTuringComplete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isTuringComplete>
-        <managedBy>Vitalik Buterin</managedBy>
+        <managedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitalik Buterin</managedBy>
         <maxTokens>18M per year</maxTokens>
         <rdfs:comment xml:lang="en">Ethereum is an open-source blockchain-based platform used to create and share business, financial services, and entertainment applications.</rdfs:comment>
     </owl:NamedIndividual>
@@ -791,6 +783,8 @@ You may earn up to 6% APR on any ETH that you stake as a reward for helping secu
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Gougen">
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Architecture"/>
+        <IsPublic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IsPublic>
+        <isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isOpen>
         <rdfs:comment xml:lang="en">The Goguen mainnet (named after U.S. computer scientist and academic Joseph Goguen) is expected to be launched around March 2021. The Goguen era will usher in a bigger technical capability for developers to create DApps that can provide more functionality to the chain, including the implementation of its multi-asset blockchain plan.
 
 
@@ -831,13 +825,11 @@ Unfortunately, Cardano is still drawing criticism from some members of the commu
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Monero">
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
         <architectureTopology rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Distributed"/>
-        <hasArchitecture rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptonote"/>
+        <basedOnTechnology rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MoneroBlockchain"/>
         <hasToken rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#XMRT"/>
-        <hasValidationMethod rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MoneroProofOfWork"/>
         <minableWith rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#NVIDIAGpu"/>
         <miningBasedOnProblem rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#HashGuessing"/>
         <writtenInLanguage rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#C++"/>
-        <IsPublic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</IsPublic>
         <Name>Monero</Name>
         <Value rdf:datatype="http://www.w3.org/2001/XMLSchema#float">180.0</Value>
         <blockDescription>Block Structure
@@ -849,10 +841,17 @@ A block consists of three parts:
   - The list starts with the number of transaction identifiers that it contains.</blockDescription>
         <canExecuteSmartContracts rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</canExecuteSmartContracts>
         <creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-04-18T09:00:00</creationDate>
-        <isOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isOpen>
-        <isTuringComplete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isTuringComplete>
         <managedBy>Nobody</managedBy>
         <maxTokens>18.3 M</maxTokens>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MoneroBlockchain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MoneroBlockchain">
+        <hasArchitecture rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptonote"/>
+        <hasValidationMethod rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#MoneroProofOfWork"/>
     </owl:NamedIndividual>
     
 
@@ -892,6 +891,8 @@ Ouroboros facilitates the creation and fruition of distributed, permissionless n
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Plutus">
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ScriptingLanguage"/>
+        <canExecuteSmartContracts rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</canExecuteSmartContracts>
+        <isTuringComplete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isTuringComplete>
         <rdfs:comment xml:lang="en">The Plutus Platform is the smart contract platform for Cardano. Plutus contracts consist of parts that run on the blockchain (on-chain code) and parts that run on a user’s machine (off-chain or client code).
 
 Plutus draws from modern language research to provide a safe, full-stack programming environment based on Haskell, the leading functional programming language. Both the on-chain and off-chain code is written in Haskell, and Plutus smart contracts are Haskell programs. Off-chain code is compiled by GHC, the Haskell compiler, and on-chain code is compiled by the Plutus compiler.
@@ -905,6 +906,8 @@ To write a smart contract using the Plutus Platform, you can code directly in th
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Script">
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ScriptingLanguage"/>
+        <canExecuteSmartContracts rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</canExecuteSmartContracts>
+        <isTuringComplete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isTuringComplete>
         <rdfs:comment>Bitcoin scripting language</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Scripting_language"/>
     </owl:NamedIndividual>
@@ -915,6 +918,8 @@ To write a smart contract using the Plutus Platform, you can code directly in th
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Solidity">
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#ScriptingLanguage"/>
+        <canExecuteSmartContracts rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</canExecuteSmartContracts>
+        <isTuringComplete rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isTuringComplete>
         <rdfs:comment xml:lang="en">Solidity is an object-oriented, high-level language for implementing smart contracts. Smart contracts are programs which govern the behaviour of accounts within the Ethereum state.
 
 Solidity is a curly-bracket language. It is influenced by C++, Python and JavaScript, and is designed to target the Ethereum Virtual Machine (EVM). You can find more details about which languages Solidity has been inspired by in the language influences section.
@@ -930,6 +935,9 @@ With Solidity you can create contracts for uses such as voting, crowdfunding, bl
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Tangle">
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Tangle"/>
+        <hasArchitecture rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Ether"/>
+        <hasScriptingLanguage rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Solidity"/>
+        <hasValidationMethod rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#EthereumStaking"/>
     </owl:NamedIndividual>
     
 
@@ -938,6 +946,7 @@ With Solidity you can create contracts for uses such as voting, crowdfunding, bl
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#XMRT">
         <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Token"/>
+        <startSellingDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-04-18T09:00:00</startSellingDate>
     </owl:NamedIndividual>
     
 
