@@ -35,6 +35,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#architectureTopology">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Cryptocurrency"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Architecture"/>
     </owl:ObjectProperty>
     
 
@@ -689,7 +691,7 @@ Another future update (not yet scheduled) is &quot;Basho&quot;.</rdfs:comment>
     <!-- http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Distributed -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Distributed">
-        <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Technology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alessandro/ontologies/2021/4/ProgettoDW#Architecture"/>
         <rdfs:comment xml:lang="en">In distributed architecture, components are presented on different platforms and several components can cooperate with one another over a communication network in order to achieve a specific objective or goal.</rdfs:comment>
     </owl:NamedIndividual>
     
